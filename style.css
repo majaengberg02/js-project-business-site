@@ -16,13 +16,14 @@ h2 {
   font-family: "Roboto", sans-serif;
   font-size: xxx-large;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 h3 {
   color: black;
   font-family: "Roboto", sans-serif;
-  font-size: medium;
+  font-size: x-large;
+  text-decoration: line-through #2446C2;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -47,6 +48,8 @@ p {
   font-size: medium;
   margin: 0;
 }
+
+
 
 /* Navigation Bar */
 .navbar {
@@ -102,7 +105,11 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
 
+.hero-text h3 {
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .hero-button a {
@@ -130,13 +137,13 @@ p {
   text-align: center;
   margin-top: 80px;
   margin-bottom: 100px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 
 /* Card Container */
-.card-container {
+.card-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 60px;
@@ -163,6 +170,189 @@ p {
   width: 100%;
 }
 
+.card a {
+  background-color: lightgray;
+  color: black;
+  border: none;
+  padding: 5px 20px;
+  font-size: medium;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.card a:hover {
+  background-color: #2446C2;
+  color: white;
+  transition: 0.3s;
+}
+
+/* View All Button */
+.view-all-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.view-all-button a {
+  background-color: lightgray;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: medium;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.view-all-button a:hover {
+  background-color: #2446C2;
+  color: white;
+  transition: 0.3s;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.contact-form {
+  width: 100%;
+  margin: 60px;
+}
+
+.name-email {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.subject-massage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2446C2;
+  box-shadow: 0 0 5px rgba(36, 70, 194, 0.5);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.checkbox-container:hover input~.custom-checkbox {
+  background-color: lightgrey;
+}
+
+.checkbox-container input:checked~.custom-checkbox {
+  background-color: #2446C2;
+}
+
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 6px;
+  border: 1px solid white;
+  border-width: 0 3px 3px 0;
+  top: 2px;
+  left: 5px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.checkbox-container input:checked~.custom-checkbox::after {
+  display: block;
+}
+
+.send-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 30%;
+  background-color: white;
+  color: black;
+  border: solid gray 1px;
+  border-radius: 3px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #2446C2;
+  color: white;
+  transition: 0.3s;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #2446C2;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  margin: 0;
+}
 
 /* Media Queries */
 @media (max-width: 600px) {
@@ -174,8 +364,13 @@ p {
     display: none;
   }
 
+  .navbar {
+    justify-content: center;
+  }
+
   .logo {
     font-size: large;
+
   }
 }
 
