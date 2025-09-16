@@ -25,6 +25,7 @@
   <section>
     <div class="hero-container">
       <img class="hero-image" src="Images/lum3n-DwDCTnlp-V4-unsplash.jpg" alt="Hero image of a dog">
+
       <div class="hero-text">
         <h2>ADOPT</h2>
         <h3>Don't shop</h3>
@@ -33,7 +34,6 @@
         </div>
       </div>
     </div>
-
   </section>
 
   <section>
@@ -79,26 +79,29 @@
     </div>
 
     <div class="contact-section">
-      <h4>Contact Us</h4>
-      <p class="contact-paraph">
-        If you have any questions or would like to learn more about our organization, please don't hesitate to reach
-        out.
-        We would love to hear from you!
-      </p>
+      <div class="contact-text">
+        <h4>Contact Us</h4>
+        <p>
+          If you have any questions or would like to learn more about our organization, please don't hesitate to reach
+          out.
+          We would love to hear from you!
+        </p>
+      </div>
 
 
       <div class="contact-form" id="contact">
-        <form>
-          <div class="name-email">
-            <input type="text" id="name" name="name" placeholder="Name">
+        <form action="http://httpbin.org/anything" method="POST">
 
-            <input type="email" id="email" name="email" placeholder="Email">
+          <div class="name-email">
+            <input type="text" id="name" name="name" placeholder="Name" required style="width: 100%;">
+
+            <input type="email" id="email" name="email" placeholder="Email" required style="width: 100%;">
           </div>
 
           <div class="subject-message">
-            <input type="text" id="subject" name="subject" placeholder="Subject">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
 
-            <textarea name="message" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
           </div>
 
           <div class="subscribe-checkbox">
