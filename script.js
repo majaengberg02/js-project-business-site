@@ -21,6 +21,7 @@ function closeSidebar() {
   document.body.classList.remove('menu-open');
 }
 
+// Close sidebar when clicking on a navigation link
 const navLinks = document.querySelectorAll('.nav-links a');
 navLinks.forEach(link => {
   link.addEventListener('click', closeSidebar);
