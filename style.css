@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap'); /* Font for logo/h1 */
 
 body {
   background-color: white;
   margin: 0;
 }
 
+
+/* Text Styles */
 h1 {
   color: #2446C2;
   font-family: "Rock Salt", cursive;
@@ -49,6 +51,7 @@ p {
   margin: 0;
 }
 
+
 /* Menu Buttons */
 #open-menu-btn {
   display: block;
@@ -71,6 +74,7 @@ p {
   cursor: pointer;
   align-self: flex-start;
 }
+
 
 /* Overlay for when menu is open */
 #overlay {
@@ -111,6 +115,7 @@ p {
   color: #2446C2;
   margin-left: 20px;
 }
+
 
 /* Hero Section */
 .hero-image {
@@ -161,6 +166,7 @@ p {
   transition: 0.3s;
 }
 
+
 /* About Section */
 .about {
   display: flex;
@@ -174,7 +180,7 @@ p {
 }
 
 
-/* Card Container */
+/* Adoption Card Section */
 .card-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -219,6 +225,7 @@ p {
   transition: 0.3s;
 }
 
+
 /* View All Button */
 .view-all-button {
   display: flex;
@@ -243,6 +250,7 @@ p {
   color: white;
   transition: 0.3s;
 }
+
 
 /* Contact Section */
 .contact-section {
@@ -276,12 +284,12 @@ p {
 .subject-message {
   display: flex;
   flex-direction: column;
-  /* width: 100%;*/
+  /* width: 100%;----- Had to add to html file instead for it to be the right width for some reason*/
 }
 
 input,
 textarea {
-  /*width: 100%;*/
+  /*width: 100%; ----- Had to add to html file instead for it to be the right width for some reason*/
   padding: 10px;
   margin: 10px 0;
   border: 1px solid gray;
@@ -347,7 +355,7 @@ input:invalid:not(:placeholder-shown) {
 }
 
 .custom-checkbox::after {
-  content: "";
+  content: ""; /* Checkmark */
   position: absolute;
   width: 3px;
   height: 6px;
@@ -386,7 +394,6 @@ input:invalid:not(:placeholder-shown) {
 }
 
 
-
 /* Footer */
 .footer {
   background-color: #2446C2;
@@ -404,8 +411,9 @@ input:invalid:not(:placeholder-shown) {
   margin: 0;
 }
 
+
 /* Media Queries */
-@media (max-width: 600px) {
+@media (max-width: 600px) /* Mobile Devices */ {
   .card {
     grid-column: span 4;
   }
@@ -448,7 +456,7 @@ input:invalid:not(:placeholder-shown) {
   }
 }
 
-@media (min-width: 601px) and (max-width: 1199px) {
+@media (min-width: 601px) and (max-width: 1199px) /* Tablets and Small Screens */ {
 
   #open-menu-btn,
   #close-menu-btn {
@@ -467,7 +475,7 @@ input:invalid:not(:placeholder-shown) {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) /* Desktops and Large Screens */ {
 
   #open-menu-btn,
   #close-menu-btn {
